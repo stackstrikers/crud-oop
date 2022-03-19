@@ -36,22 +36,17 @@ if(isset($_GET['status'])){
     <form action="" method="post" enctype="multipart/form-data" class="form">
 
             <?php
-                if (isset($_GET['message'])){
-                if ($_GET['message'] = 'insertsuccess'){
+            if (isset($_GET['result'])){
+                if ($_GET['result'] == 'insertsuccess'){
                     echo ' <div class="container my-4 p-4 shadow text-center fw-bold"> Data Inserted Successfully </div>';
                 }
-            }
-
-            if (isset($_GET['output'])){
-                if ($_GET['output'] = 'updatesuccess'){
+                elseif ($_GET['result'] == 'updatesuccess'){
                     echo ' <div class="container my-4 p-4 shadow text-center fw-bold"> Data Updated Successfully </div>';
                 }
-            }
-
-            if (isset($_GET['result'])){
-            if ($_GET['result'] = 'deletesuccess'){
+                elseif ($_GET['result'] == 'deletesuccess'){
                     echo ' <div class="container my-4 p-4 shadow text-center fw-bold"> Data Deleted Successfully </div>';
                 }
+
             }
         ?>
 

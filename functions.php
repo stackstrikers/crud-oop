@@ -29,7 +29,7 @@ Class CrudApp
 
         if (mysqli_query($this->conn, $query)) {
             move_uploaded_file($tmpName, "uploads/$stdImage");
-            header("Location:index.php?message=insertsuccess");
+            header("Location:index.php?result=insertsuccess");
             exit();
         }
     }
@@ -66,7 +66,7 @@ Class CrudApp
 
         if (mysqli_query($this->conn, $query)) {
             move_uploaded_file($tmpName, "uploads/$stdImage");
-            header("Location:index.php?output=updatesuccess");
+            header("Location:index.php?result=updatesuccess");
             exit();
         }
     }
